@@ -18,7 +18,17 @@ SELECT pg_size_pretty (pg_relation_size('mytable'));
 
 pg_size_pretty
 ----------------
-           16 kB
+ 16 KB
 
 ```
 - 會自動以 KB, MB, GB 等單位轉換顯示
+
+## pg_database_size()
+- 適合用來監控資料庫所佔用的空間大小
+```
+select pg_size_pretty(pg_database_size ('postgres'));
+
+ pg_size_pretty
+----------------
+ 8517 MB
+```
